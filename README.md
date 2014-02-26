@@ -25,3 +25,5 @@ optional arguments:
                         address, default is "localhost".
   -p [PORTS [PORTS ...]], --port [PORTS [PORTS ...]]
                         PORTS to be checked
+
+Default ADDRESS is 'localhost', default ports for checking are 80 and 22.                     
