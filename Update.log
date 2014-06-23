@@ -1,34 +1,34 @@
-#2014-06-23
-#Correct wrong English expressions in portcheck
-#
-#diff --git a/portcheck.py b/portcheck.py
-#old mode 100644
-#new mode 100755
-#index 4612688..85bc473
-#--- a/portcheck.py
-#+++ b/portcheck.py
-#@@ -20,17 +20,17 @@ import sys
-# def check_open_port(address='localhost', *ports):
-#     port_lst = []
-#     for i in ports:
-#-        print('Attempting to connect to {0} on port {1}'.format(address, i))
-#+        print('Attempting to connect to port {0} on {1}'.format(i, address))
-# 
-#         try:
-#             socket.create_connection((address,i))
-#-            print("Connected to {0} on port {1}".format(address,i))
-#+            print("Connected to port {0} on {1}".format(i, address))
-#             port_lst.append(i)
-#         except socket.error as e:
-#-            print("Connection to {0} on port {2} failed {1}".format(address,e,i))
-#+            print("Connection to port {0} on {2} failed {1}".format(i, e, address))
-#             print("Port {0} seems not open on {1}".format(i,address))
-#     if len(port_lst) == 0:
-#-        print("The port(s) you check: {0} is/are not opened".format(str(ports)[1:-1]))
-#+        print("The port(s) {0} is/are not opened".format(str(ports)[1:-1]))
-#     else:
-#         print("Opened Ports on {0} are: {1}".format(address,port_lst))
-# 
-#
-#2014-02-26
-#Initiate the script
+2014-06-23
+Correct wrong English expressions in portcheck
+
+diff --git a/portcheck.py b/portcheck.py
+old mode 100644
+new mode 100755
+index 4612688..85bc473
+--- a/portcheck.py
++++ b/portcheck.py
+@@ -20,17 +20,17 @@ import sys
+ def check_open_port(address='localhost', *ports):
+     port_lst = []
+     for i in ports:
+-        print('Attempting to connect to {0} on port {1}'.format(address, i))
++        print('Attempting to connect to port {0} on {1}'.format(i, address))
+ 
+         try:
+             socket.create_connection((address,i))
+-            print("Connected to {0} on port {1}".format(address,i))
++            print("Connected to port {0} on {1}".format(i, address))
+             port_lst.append(i)
+         except socket.error as e:
+-            print("Connection to {0} on port {2} failed {1}".format(address,e,i))
++            print("Connection to port {0} on {2} failed {1}".format(i, e, address))
+             print("Port {0} seems not open on {1}".format(i,address))
+     if len(port_lst) == 0:
+-        print("The port(s) you check: {0} is/are not opened".format(str(ports)[1:-1]))
++        print("The port(s) {0} is/are not opened".format(str(ports)[1:-1]))
+     else:
+         print("Opened Ports on {0} are: {1}".format(address,port_lst))
+ 
+
+2014-02-26
+Initiate the script
