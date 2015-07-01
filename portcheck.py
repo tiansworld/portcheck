@@ -12,7 +12,6 @@
 ## suggestion, improvement on this script is welcome.
 ##
 
-## 
 import socket
 import argparse
 import sys
